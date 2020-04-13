@@ -25,6 +25,10 @@ h3 {
     text-transform: capitalize;
 }
 
+p {
+    line-height: 30px;
+}
+
 
 /* HEADING */
 
