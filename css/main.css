@@ -1,0 +1,267 @@
+:root {
+    --primary-color: #e3e3e3;
+    --secondary-color: rgb(27, 27, 27);
+    --text-color: #f1f1f1;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+    color: #FDD42A;
+}
+
+h3 {
+    text-transform: capitalize;
+}
+
+
+/* HEADING */
+
+.heading {
+    height: 150px;
+    text-align: center;
+    padding: 30px;
+}
+
+.heading h1 {
+    color: #FDD42A;
+    font-size: 33px;
+}
+
+.heading p {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.nav {
+    list-style: none;
+    display: flex;
+    margin: 20px auto;
+    width: 95%;
+}
+
+.nav a {
+    font-size: 24px;
+    margin-right: 30px;
+}
+
+.nav a:hover {
+    border-bottom: 2px solid #FDD42A;
+}
+
+
+/* PROJECTS */
+
+.my-projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+    width: 95%;
+}
+
+.project {
+    border: 1px solid rgb(241, 241, 241);
+    padding: 5px;
+}
+
+.project-item {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+}
+
+.project-item-thumbnail {
+    grid-row: 1 / 6;
+    grid-column: 1 / 7;
+}
+
+.project-item-thumbnail img {
+    width: 100%;
+    height: 100%;
+}
+
+.project-item-ui {
+    grid-row: 1 / 4;
+    grid-column: 7 / 9;
+    padding: 5px;
+}
+
+.project-item-ui ul {
+    list-style: none;
+}
+
+.project-item-ui a:hover,
+.project-item-ui i:hover {
+    border-right: 2px solid #FDD42A;
+}
+
+.view-ui {
+    display: flex;
+    align-items: center;
+}
+
+.fa-caret-right {
+    margin-left: 5px;
+}
+
+.tools li {
+    margin-top: 10px;
+}
+
+.tool-icon {
+    width: 30px;
+    height: 40px;
+    font-size: 10px;
+    font-weight: bold;
+    color: black;
+    padding: 5px 10px;
+    background-color: #FDD42A;
+    border-radius: 100%;
+}
+
+.project-item-title {
+    grid-row: 6 / 7;
+    grid-column: 1 / 7;
+    padding: 5px;
+}
+
+.project-item-live {
+    grid-row: 7 / 8;
+    grid-column: 1 / 4;
+    align-self: center;
+    padding: 5px;
+}
+
+.project-item-live a:hover {
+    border-bottom: 2px solid white;
+}
+
+.live {
+    background-color: #FDD42A;
+    color: black;
+    padding: 10px 20px;
+}
+
+.github {
+    background-color: rgb(44, 44, 44);
+    padding: 8px 16px;
+}
+
+.project-item-links {
+    grid-row: 7 / 8;
+    grid-column: 4 / 7;
+    align-self: center;
+    padding: 5px;
+}
+
+.project-item-links a:hover {
+    border-bottom: 2px solid #FDD42A;
+}
+
+.project-item-tech {
+    grid-row: 4 / 8;
+    grid-column: 7 / 9;
+    padding: 5px;
+}
+
+.project-item-tech ul {
+    list-style: none;
+}
+
+.project-item-tech li {
+    margin-top: 10px;
+    text-transform: capitalize;
+}
+
+.fab {
+    color: #FDD42A;
+}
+
+
+/* FOOTER */
+
+.footer {
+    height: 100px;
+    text-align: center;
+}
+
+.contact a:hover {
+    border-bottom: 2px solid #FDD42A;
+}
+
+@media only screen and (max-width:1024px) {
+    .app-name {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .my-projects {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+    }
+    .project {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .project-item-thumbnail {
+        grid-row: 1 / 4;
+        grid-column: 1 / 9;
+    }
+    .project-item-ui {
+        grid-row: 4 / 5;
+        grid-column: 1 / 9;
+        padding: 5px;
+    }
+    .project-item-title {
+        grid-row: 5 / 6;
+        grid-column: 1 / 9;
+    }
+    .project-item-live {
+        grid-row: 6 / 7;
+        grid-column: 1 / 5;
+    }
+    .project-item-links {
+        grid-row: 6 / 7;
+        grid-column: 5 / 9;
+    }
+    .project-item-ui ul {
+        display: flex;
+    }
+    .project-item-ui li {
+        margin-left: 5px;
+    }
+    .app-name {
+        display: none;
+    }
+    .project-item-tech {
+        grid-row: 7 / 8;
+        grid-column: 1 / 9;
+    }
+    .project-item-tech ul {
+        display: flex;
+    }
+    .project-item-tech li {
+        margin-left: 5px;
+    }
+}
